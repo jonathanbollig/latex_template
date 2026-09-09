@@ -1,10 +1,29 @@
-*Created by Claude [[2026-09-08]], edited by me*
+*Created by Claude [[2026-09-08]], edited by me (General Ideas and minor edits)*
 
-# LaTeX + VS Code workflow
+I was tired by Overleaf and decided to build a local setup, that is well integrated with Claude and zotero. 
+# General Ideas:
 
-Local files, normal git repo, Overleaf only as a review copy for the supervisor. System: [[P1 Linux (CachyOS + KDE) Installation]]. References: [[Zotero Nextcloud Sync Setup and Usage]].
+- Use VS Code (+ Plugin) as an editor for LaTeX.
+- Zotero is used to manage papers and citations. It writes references.bib automatically, and creates the keys.
+- Claude code integration is central. Claude is able to make changes, debug etc, compile, and check for success. CLAUDE.md gives instructions to Claude how to handle this project, execute changes. 
+- Git is used to keep a version history.
+
+Some comments on the LaTeX structure:
+- `main.tex` is meant to be kept as clean as possible. Therefore, all package loading and settings in `preample.tex`. Self written macros belong into `macros.tex`. The frontmatter folder contains title page, abstract, etc. (everything outside of chapters). Chapters are stored in separate folder. 
+- Other folders and files: 
+  - build: Here goes the export pdf and helper files.
+  - .latexmkrc: Tells the compiler compile settings. 
+  - .gitignore: Tells git to ignore /build (+ other helper files)
+  - CLAUDE.md: Tells Claude how to interact with this project. 
+
+
+# Details:
+
+Local files, normal git repo, Overleaf only as a review copy for the supervisor.
 
 ## Install
+
+*For arch-based Linux distro. If you use windows, ask an AI of your choice (or use your brain), what to do.*
 
 - `paru -S texlive-meta texlive-bibtexextra biber`
 - `paru -S texlive-binextra` — `latexdiff`, `latexmk`, `chktex`
@@ -197,6 +216,7 @@ Both are global BBT settings, not per-collection. To make them take effect on th
 Do this **before `git init`**, so the local paths never enter the history.
 
 ## Overleaf review loop (to do later)
+*Note: I didn't do this yet, therefore no guaranty that this works.*
 
 Free plan: 1 collaborator, no git bridge, no track changes. So:
 
