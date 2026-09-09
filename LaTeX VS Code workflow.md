@@ -1,4 +1,4 @@
-_Created by Claude [[2026-09-08]]_
+*Created by Claude [[2026-09-08]], edited by me*
 
 # LaTeX + VS Code workflow
 
