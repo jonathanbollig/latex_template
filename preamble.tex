@@ -1,0 +1,70 @@
+% written by Claude @08.09.26
+
+% ---------- encoding & language ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}        % harmless on modern pdflatex, keep for safety
+\usepackage[english]{babel}        % the thesis is English; the one German abstract needs no switch
+\usepackage{csquotes}              % biblatex WILL warn if this is missing
+
+% ---------- maths: MUST come before newtx ----------
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}             % loads and patches amsmath; load after it
+\usepackage{bm}
+
+% ---------- fonts & layout ----------
+\usepackage{newtxtext,newtxmath}   % Times-like; drop both for Latin Modern
+% Screen layout: symmetric margins, no binding offset.
+% For a bound print copy: add bindingoffset=1cm here, and twoside,openright in main.tex
+\usepackage[a4paper,margin=3cm,marginparwidth=2.2cm]{geometry}  % marginpar wide enough for todonotes
+\usepackage{microtype}             % better justification, free improvement
+\usepackage{setspace}
+\onehalfspacing
+
+% ---------- units & chemistry ----------
+\usepackage{siunitx}               % also gives S columns for decimal alignment
+\sisetup{
+  separate-uncertainty = true,     % 4.2 +- 0.3; set false for the compact 4.2(3)
+  range-units          = single,   % "4 to 6 K" not "4 K to 6 K"
+  per-mode             = symbol,
+}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+
+% ---------- figures & tables ----------
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{booktabs}              % \toprule \midrule \bottomrule; no vertical rules
+\usepackage{subcaption}
+\usepackage[font=small,labelfont=bf]{caption}
+
+% ---------- bibliography ----------
+\usepackage[
+  backend=biber,
+  style=phys,
+  autocite=inline,      % \autocite → [1] instead of superscript
+  biblabel=brackets,    % [1] in the bibliography list too
+  sorting=none,
+  giveninits=true,
+]{biblatex}
+\addbibresource{references.bib}
+
+% ---------- cross-references: ORDER MATTERS ----------
+\usepackage{hyperref}              % load near-last, it patches many other packages
+\definecolor{linkblue}{HTML}{14508C}
+\hypersetup{
+  colorlinks        = true,
+  linkcolor         = linkblue,    % visible on screen; set all three to black for print
+  citecolor         = linkblue,
+  urlcolor          = linkblue,
+  bookmarksnumbered = true,        % PDF sidebar outline, numbered like the ToC
+  bookmarksopen     = true,
+  pdfstartview      = {FitH},      % open fitted to the page width
+  pdftitle          = {Sample Title of the Thesis},
+  pdfauthor         = {Mr. Sample},
+}
+\usepackage{cleveref}              % MUST come after hyperref
+\usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}  % \todo{cite}; after hyperref
+
+% ---------- your notation ----------
+\input{macros}

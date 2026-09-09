@@ -1,0 +1,26 @@
+# written by Claude @07.09.26
+
+# Everything latexmk produces lands here
+build/
+
+# ...but if you ever build outside build/, catch the strays too
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.xdv
+
+# Editor / OS / sync noise
+*conflicted copy*
+*.swp
+.DS_Store

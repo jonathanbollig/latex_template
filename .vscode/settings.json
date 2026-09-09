@@ -1,0 +1,21 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/build",
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-rc",
+      "command": "latexmk",
+      "args": [],
+      "env": {}
+    }
+  ],
+
+  "latex-workshop.latex.recipes": [
+    { "name": "latexmk (rc)", "tools": ["latexmk-rc"] }
+  ],
+
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoClean.run": "never"
+}

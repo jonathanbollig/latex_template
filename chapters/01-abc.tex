@@ -1,0 +1,28 @@
+% !TEX root = ../main.tex
+\chapter{ABC}
+\label{ch:abc}
+This is a sentence. 
+This is another sentence with $\kB$. 
+
+This is a reference to Kufners work \autocite{kufner2023Photophysics}.
+
+According to \textcite{kufner2023Photophysics}, this is a reference to Kufners work.
+
+Blabla bla \textcite{bucher2016UVInducedCharge}.
+
+This and that. And even more.
+
+\section{A Sample Section}
+\label{sec:abc-sample}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{sample.jpg}
+  \caption{A sample figure.
+  The caption carries the explanation; the text says why the reader should look at it.}
+  \label{fig:sample}
+\end{figure}
+
+\Cref{fig:sample} shows the sample figure, and \cref{sec:abc-sample} is this section.
+A number with a unit is written \qty{4.2}{\kelvin}, a range \qtyrange{250}{700}{\nano\metre}, and a value with an uncertainty \qty{4.2(3)}{\pico\second}.
+Chemical formulas go through mhchem, for example \ce{H2O} and \ce{Mo3S13^2-}.

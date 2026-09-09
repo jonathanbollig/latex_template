@@ -1,0 +1,24 @@
+% Screen-reading setup. For a bound print copy: twoside,openright
+\documentclass[12pt,a4paper,oneside,openany]{book}
+\input{preamble}
+
+\begin{document}
+\input{frontmatter/titlepage}
+\input{frontmatter/abstract}
+\input{frontmatter/abstract_german}
+\tableofcontents
+
+\include{chapters/01-abc}
+\include{chapters/02-abc}
+\include{chapters/03-abc}
+\include{chapters/04-abc}
+\include{chapters/05-abc}
+
+\appendix
+\include{chapters/a-sup-abc}
+\include{chapters/b-sup-abc}
+
+\printbibliography[heading=bibintoc]
+
+\input{frontmatter/declaration}
+\end{document}
