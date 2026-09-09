@@ -8,7 +8,7 @@
 - Stick strictly with my instructions. If you find things to do, please tell me, and I will decide on how to continue. 
 - If you think parts of this .md could be improved, tell me. 
 - Read preamble.tex to understand what packages are used.
-- Read LaTeX VS Code workflow.md to understand the general setup idea. 
+- Read README.md to understand the general setup idea. 
 
 ## Language
 - The thesis is written **entirely in English**.
