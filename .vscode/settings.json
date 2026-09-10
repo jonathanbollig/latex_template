@@ -1,4 +1,6 @@
 {
+  "explorer.autoReveal": false,
+
   "latex-workshop.latex.outDir": "%DIR%/build",
 
   "latex-workshop.latex.tools": [

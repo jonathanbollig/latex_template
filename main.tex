@@ -2,23 +2,34 @@
 \documentclass[12pt,a4paper,oneside,openany]{book}
 \input{preamble}
 
+% ---------- draft build settings ----------
+% Draft mode: skip frontmatter/backmatter boilerplate for faster single-chapter builds.
+% Comment out (or \draftbuildfalse) for a full review build. (This also deactivates biber, since it is read in .latexmkrc.)
+\newif\ifdraftbuild
+%\draftbuildtrue
+% Includeonly ommits chapters not listed, for faster single-chapter builds.
+%\includeonly{chapters/01-abc}
+% ---------- draft build settings ----------
+
 \begin{document}
+\ifdraftbuild\else
 \input{frontmatter/titlepage}
 \input{frontmatter/abstract}
 \input{frontmatter/abstract_german}
 \tableofcontents
+\fi
 
 \include{chapters/01-abc}
 \include{chapters/02-abc}
 \include{chapters/03-abc}
-\include{chapters/04-abc}
-\include{chapters/05-abc}
 
 \appendix
 \include{chapters/a-sup-abc}
 \include{chapters/b-sup-abc}
 
+\ifdraftbuild\else
 \printbibliography[heading=bibintoc]
 
 \input{frontmatter/declaration}
+\fi
 \end{document}
