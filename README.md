@@ -16,6 +16,10 @@ Some comments on the LaTeX structure:
   - .gitignore: Tells git to ignore /build (+ other helper files)
   - CLAUDE.md: Tells Claude how to interact with this project. 
 
+The `main.tex` includes a \newif\ifdraftbuild. If the line `%\draftbuildtrue` is uncommented, latex ignores everything (title, references, etc.), except the actual chapters. `.latekmkrc` also reads that, and doesn't build twice for references. While drafting, references will just be "?". 
+
+For even faster compile, one can only compile a single chapter by uncommenting `%\includeonly{chapters/01-abc}`.
+
 
 # Details:
 
