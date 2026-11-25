@@ -9,7 +9,7 @@ I was tired by Overleaf and decided to build a local setup, that is well integra
 - Git is used to keep a version history.
 
 Some comments on the LaTeX structure:
-- `main.tex` is meant to be kept as clean as possible. Therefore, all package loading and settings in `preample.tex`. Self written macros belong into `macros.tex`. The frontmatter folder contains title page, abstract, etc. (everything outside of chapters). Chapters are stored in separate folder. 
+- `main.tex` is meant to be kept as clean as possible. Therefore, all package loading and settings in `preamble.tex`. Self written macros belong into `macros.tex`. The frontmatter folder contains title page, abstract, etc. (everything outside of chapters). Chapters are stored in separate folder. 
 - Other folders and files: 
   - build: Here goes the export pdf and helper files.
   - .latexmkrc: Tells the compiler compile settings. 
